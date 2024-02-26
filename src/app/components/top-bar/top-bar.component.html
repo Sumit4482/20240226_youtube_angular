@@ -1,0 +1,33 @@
+<header class="top-bar">
+  <div class="left-section">
+    <button class="menu-button">
+      <img class="menu-icon" [src]="menuIconUrl" />
+    </button>
+    <div class="youtube-logo-container">
+      <img class="youtube-logo" [src]="youtubeLogoUrl" />
+    </div>
+  </div>
+
+  <div class="middle-section">
+    <input class="search-bar" type="search" placeholder="Search" />
+    <button class="search-button">
+      <img class="search-icon" [src]="searchIconUrl" />
+    </button>
+    <button class="voice-search-button">
+      <img class="voice-search-icon" [src]="voiceSearchIconUrl" />
+    </button>
+  </div>
+
+  <div class="right-section">
+    <button class="upload-button">
+      <img class="upload-icon" [src]="uploadIconUrl" />
+    </button>
+    <button class="notifications-button">
+      <img class="notifications-icon" [src]="notificationsIconUrl" />
+      <div class="notifications-count">{{ notificationsCount }}</div>
+    </button>
+    <button class="profile-button">
+      <img class="profile-icon" [src]="profileIconUrl" />
+    </button>
+  </div>
+</header>
