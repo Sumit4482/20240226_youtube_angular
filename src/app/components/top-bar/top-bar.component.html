@@ -26,8 +26,49 @@
       <img class="notifications-icon" [src]="notificationsIconUrl" />
       <div class="notifications-count">{{ notificationsCount }}</div>
     </button>
-    <button class="profile-button">
+
+    <button class="profile-button" (click)="toggleSettingsMenu()">
       <img class="profile-icon" [src]="profileIconUrl" />
     </button>
   </div>
+
+
+  <div class="settings-menu {{ settingsMenuOpen ? 'settings-menu-height' : ' '}}">
+    <div class="settings-menu-inner">
+        <div class="user-profile">
+            <img
+                src="assets/icons/user.png">
+            <div>
+                <p>Sumit</p>
+                <p>See your profile</p>
+            </div>
+        </div>
+        <hr>
+        <div class="settings-links">
+            <img src="assets/icons/setting.png" class="settings-icon">
+            <a href ="#" routerLink="settings">Settings & Privacy </a>
+        </div>
+        <div class="settings-links">
+          <img src="assets/icons/feedback.png" class="feedback-icon">
+          <a href="#">Send feedback</a>
+      </div>
+      <div class="settings-links">
+        <img src="assets/icons/google.png" class="google-icon">
+        <a href="#">Google Account</a>
+    </div>
+        <div class="settings-links">
+            <img src="assets/icons/question.png" class="settings-icon">
+            <a href="#">Help & Support</a>
+        </div>
+        <div class="settings-links">
+            <img src="assets/icons/translate.png" class="translation-icon">
+            <a href="#">Translations</a>
+        </div>
+        <div class="settings-links">
+            <img src="assets/icons/logout.png" class="logout-icon">
+            <a href="#">Sign Out</a>
+        </div>
+    </div>
+</div>
+
 </header>
