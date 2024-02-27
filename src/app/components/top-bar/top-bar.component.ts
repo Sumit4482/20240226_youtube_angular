@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-top-bar',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './top-bar.component.html',
   styleUrl: './top-bar.component.css',
 })
@@ -16,4 +17,9 @@ export class TopBarComponent {
   notificationsIconUrl = 'assets/icons/notifications.png';
   notificationsCount = '9+';
   profileIconUrl = 'assets/icons/user.png';
+  settingsMenuOpen = false
+
+  toggleSettingsMenu () {
+    this.settingsMenuOpen = !this.settingsMenuOpen
+  }
 }
